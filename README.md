@@ -21,7 +21,9 @@ $ kubectl apply -f deploy/kubernetes/jaeger
 
 Wait for all the Sock Shop services to start
 
+```
 $ kubectl get pods -n sock-shop
+```
 
 Check the Sock Shop webpage
 Once the application is deployed, navigate to http://<your-cluster-ip>:30001 to see the Sock Shop home page.
