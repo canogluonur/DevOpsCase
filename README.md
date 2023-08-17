@@ -13,12 +13,15 @@ $ cd DevOpsCase
 
 Deploy Sock Shop
 
+```
 $ kubectl create -f deploy/kubernetes/manifests/sock-shop.yaml
+```
 
 To start Jaeger run the following command after deploying the sock shop
 
+```
 $ kubectl apply -f deploy/kubernetes/jaeger
-
+```
 Wait for all the Sock Shop services to start
 
 ```
