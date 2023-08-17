@@ -1,15 +1,16 @@
 # DevOpsCase
 
-
 Sock-Shop on K3s
 
 First of all, we open 3 ec2 ​​instances from amazon.
 
 Then Clone the this repo
+
 ```
 $ git clone https://github.com/canogluonur/DevOpsCase.git
 $ cd DevOpsCase
 ```
+
 Deploy Sock Shop
 
 $ kubectl create -f deploy/kubernetes/manifests/sock-shop.yaml
