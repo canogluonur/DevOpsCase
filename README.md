@@ -31,11 +31,33 @@ $ kubectl get pods -n sock-shop
 Check the Sock Shop webpage
 Once the application is deployed, navigate to http://<your-cluster-ip>:30001 to see the Sock Shop home page.
 
+
+
 Opentracing
+
 Jaeger is part of the deployment and has been written into some of the services. While the system is up you can view the traces in Jaeger at http://<your-cluster-ip>:<jaeger-nodePort> . Currently orders provide the most comprehensive traces, but this requires a user to place an order.
 
+### You can check the photo on /photo directory
+
+
+
+### Load-Test
 
 ```
-![Screenshot](https://user-images.githubusercontent.com/58385909/193022232-e7938a35-ea47-440f-8f06-cfc955b89797.png)
+$ docker run --rm weaveworksdemos/load-test -d 5 -h <your-cluster-ip>:30001 -c 2 -r 100
+```
+
+
+### Monitoring
 
 ```
+$ kubectl create -f ./deploy/kubernetes/monitoring
+```
+
+Prometheus:
+
+```
+$ kubectl get svc prometheus/monitoring -n monitoring
+```
+
+
