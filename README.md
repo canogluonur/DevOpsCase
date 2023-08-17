@@ -54,10 +54,12 @@ $ docker run --rm weaveworksdemos/load-test -d 5 -h <your-cluster-ip>:30001 -c 2
 $ kubectl create -f ./deploy/kubernetes/monitoring
 ```
 
-Prometheus:
+Prometheus And Grafana:
 
 ```
-$ kubectl get svc prometheus/monitoring -n monitoring
+$ kubectl get svc  -n monitoring
 ```
+
+Then you can look the grafana and promethus's NodePorts.
 
 
